@@ -24,7 +24,7 @@ title: Welcome
 <section id="about" class="about-section full-bleed">
   <h2>About Me</h2>
   <div class="about-content">
-    <p>As a passionate Gameplay & Tools Developer and UX enthusiast, I focus on creating engaging and intuitive experiences. I specialize in building robust gameplay systems and the custom tools that empower designers to bring their visions to life, always with a sharp eye on clean code and thoughtful user-centered design.</p>
+    <p></p>
   </div>
 </section>
 
@@ -71,7 +71,7 @@ title: Welcome
         <div class="skills-container">
           <span class="skill-badge">Jira</span>
           <span class="skill-badge">Github</span>
-          <span class="skill-badge">Figma</span>
+          <span class="skill-badge">Trello</span>
         </div>
       </div>
     </div>
@@ -80,9 +80,9 @@ title: Welcome
       <div class="skills-container">
         <span class="skill-badge">Design Thinking</span>
         <span class="skill-badge">Problem Solving</span>
+        <span class="skill-badge">Resolving Bugs</span>
         <span class="skill-badge">Team Collaboration</span>
         <span class="skill-badge">Agile Methodologies</span>
-        <span class="skill-badge">User-Centric Design</span>
       </div>
     </div>
   </div>
@@ -107,17 +107,17 @@ title: Welcome
     text-align: center;
     padding: 2rem;
     background: 
-      radial-gradient(circle at 20% 80%, rgba(231, 76, 60, 0.3) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(52, 152, 219, 0.3) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(155, 89, 182, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(22, 163, 74, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, rgba(21, 128, 61, 0.3) 0%, transparent 50%),
       linear-gradient(135deg, 
-        #e74c3c 0%, 
-        #f39c12 15%, 
-        #f1c40f 30%, 
-        #2ecc71 45%, 
-        #3498db 60%, 
-        #9b59b6 75%, 
-        #e74c3c 100%);
+        #22c55e 0%, 
+        #16a34a 15%, 
+        #15803d 30%, 
+        #166534 45%, 
+        #14532d 60%, 
+        #052e16 75%, 
+        #22c55e 100%);
     background-size: 400% 400%, 300% 300%, 350% 350%, 400% 400%;
     animation: 
       scroll-bg 20s ease infinite,
@@ -251,7 +251,7 @@ title: Welcome
 
   .primary { 
     background: rgba(255,255,255,0.9); 
-    color: #6366f1; 
+    color: #22c55e; 
   }
 
   .secondary { 
@@ -317,11 +317,11 @@ title: Welcome
   }
 
   @keyframes subtle-dark-shift {
-    0%   { background-color: #0c0a18; }
-    25%  { background-color: #201a3a; }
-    50%  { background-color: #2c2a48; }
-    75%  { background-color: #201a3a; }
-    100% { background-color: #0c0a18; }
+    0%   { background-color: #0a1a0a; }
+    25%  { background-color: #1a2e1a; }
+    50%  { background-color: #2d5a2d; }
+    75%  { background-color: #1a2e1a; }
+    100% { background-color: #0a1a0a; }
   }
 
   /* General Section Styling */
@@ -333,7 +333,7 @@ title: Welcome
     padding: 6rem 2rem;
     text-align: center;
     color: white;
-    background: linear-gradient(180deg, #111 0%, #1a1a2e 100%);
+    background: linear-gradient(180deg, #0a1a0a 0%, #1a2e1a 100%);
     position: relative;
     z-index: 5;
   }
@@ -408,7 +408,7 @@ title: Welcome
 
   /* Projects Section */
   .projects-section {
-    background: #1a1a2e;
+    background: #1a2e1a;
     color: white;
     padding: 5rem 0;
     position: relative;
@@ -431,9 +431,9 @@ title: Welcome
     width: 100%;
     height: 100%;
     background-image:
-      radial-gradient(circle at 15% 50%, rgba(155, 89, 182, 0.2), transparent 40%),
-      radial-gradient(circle at 85% 30%, rgba(52, 152, 219, 0.15), transparent 40%),
-      radial-gradient(circle at 50% 80%, rgba(231, 76, 60, 0.1), transparent 40%);
+      radial-gradient(circle at 15% 50%, rgba(34, 197, 94, 0.2), transparent 40%),
+      radial-gradient(circle at 85% 30%, rgba(22, 163, 74, 0.15), transparent 40%),
+      radial-gradient(circle at 50% 80%, rgba(21, 128, 61, 0.1), transparent 40%);
     animation: pulse-glow 10s ease-in-out infinite, background-shift 15s ease-in-out infinite;
     z-index: 1;
   }
@@ -467,7 +467,7 @@ title: Welcome
 
   .project-card-link:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(155, 89, 182, 0.6);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(34, 197, 94, 0.6);
   }
 
   .project-card {

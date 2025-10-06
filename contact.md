@@ -12,7 +12,6 @@ title: Contact
 
     <div class="contact-header">
         <h1>Contact</h1>
-        <p class="subtitle">Let's discuss your next project or opportunity</p>
     </div>
 
     <div class="contact-content">
@@ -47,10 +46,6 @@ title: Contact
                     <i class="fas fa-map-marker-alt"></i>
                     <span>Chelles, Île-de-France, France</span>
                 </div>
-                <div class="info-link">
-                    <i class="fas fa-phone"></i>
-                    <span><!-- Optional phone --> </span>
-                </div>
             </div>
 
             <div class="cv-section">
@@ -66,35 +61,6 @@ title: Contact
                     </a>
                 </div>
             </div>
-        </div>
-
-        <div class="contact-form">
-            <form action="https://formspree.io/f/mzzrnywb" method="POST">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-button">
-                    <i class="fas fa-paper-plane"></i>
-                    <span>Send Message</span>
-                </button>
-            </form>
         </div>
     </div>
 </div>
@@ -127,8 +93,8 @@ title: Contact
         width: 100%;
         height: 100%;
         background-image: 
-            linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+            linear-gradient(rgba(34, 197, 94, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(34, 197, 94, 0.03) 1px, transparent 1px);
         background-size: 40px 40px;
         animation: pattern-move 40s linear infinite;
     }
@@ -139,8 +105,8 @@ title: Contact
         width: 100%;
         height: 100%;
         background-image: 
-            radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.1) 1px, transparent 1px),
-            radial-gradient(circle at 80% 80%, rgba(231, 76, 60, 0.1) 1px, transparent 1px);
+            radial-gradient(circle at 20% 20%, rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+            radial-gradient(circle at 80% 80%, rgba(22, 163, 74, 0.1) 1px, transparent 1px);
         background-size: 80px 80px, 120px 120px;
         animation: particle-drift-contact 30s ease-in-out infinite;
     }
@@ -162,7 +128,7 @@ title: Contact
         background-clip: text;
         animation: text-shimmer-contact 4s ease-in-out infinite;
         margin-bottom: 1rem;
-        text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+        text-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
     }
 
     .subtitle {
@@ -171,20 +137,11 @@ title: Contact
         opacity: 0.9;
     }
 
-    /* Contact Content */
-    .contact-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        position: relative;
-        z-index: 2;
-    }
 
     /* Contact Info */
     .contact-info {
         flex: 1;
         max-width: 400px;
-        margin-right: 4rem;
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -275,7 +232,7 @@ title: Contact
     }
 
     a.info-link {
-        background: linear-gradient(90deg, #e74c3c, #f39c12, #f1c40f, #2ecc71, #3498db, #9b59b6, #e74c3c);
+        background: linear-gradient(90deg, #22c55e, #16a34a, #15803d, #166534, #14532d, #052e16, #22c55e);
         background-size: 200% auto;
         background-clip: text;
         -webkit-background-clip: text;
@@ -351,121 +308,6 @@ title: Contact
         color: white;
     }
 
-    /* Contact Form */
-    .contact-form {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(20px);
-        padding: 2.5rem;
-        border-radius: 20px;
-        box-shadow: 
-            0 20px 40px rgba(0, 0, 0, 0.1),
-            inset 0 1px 0 rgba(255, 255, 255, 0.2);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .contact-form::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #e74c3c, #f39c12, #f1c40f, #2ecc71, #3498db, #9b59b6);
-        background-size: 200% 100%;
-        animation: rainbow-flow 3s linear infinite;
-    }
-
-    .form-group {
-        margin-bottom: 2rem;
-        position: relative;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 0.75rem;
-        color: var(--text-color);
-        font-weight: 600;
-        font-size: 1rem;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        width: 100%;
-        padding: 1rem;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        border-radius: 12px;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        background: rgba(255, 255, 255, 0.05);
-        color: var(--text-color);
-        backdrop-filter: blur(10px);
-    }
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-        outline: none;
-        border-color: var(--accent-color);
-        box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
-        transform: translateY(-2px);
-    }
-
-    /* Submit Button */
-    .submit-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.75rem;
-        width: 100%;
-        padding: 1.25rem;
-        background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
-        color: white;
-        border: none;
-        border-radius: 15px;
-        font-size: 1.1rem;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-        box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
-    }
-
-    .submit-button::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-        transition: left 0.6s;
-    }
-
-    .submit-button:hover::before {
-        left: 100%;
-    }
-
-    .submit-button:hover {
-        transform: translateY(-5px) scale(1.02);
-        box-shadow: 
-            0 15px 40px rgba(99, 102, 241, 0.4),
-            0 0 30px rgba(99, 102, 241, 0.3);
-    }
-
-    .submit-button:active {
-        transform: translateY(-2px) scale(0.98);
-    }
-
-    .submit-button i {
-        font-size: 1.2rem;
-        transition: transform 0.3s ease;
-    }
-
-    .submit-button:hover i {
-        transform: translateX(5px) rotate(15deg);
-    }
 
     /* Animations */
     @keyframes pattern-move {
@@ -501,10 +343,6 @@ title: Contact
 
         .social-links {
             grid-template-columns: 1fr;
-        }
-
-        .contact-form {
-            padding: 2rem;
         }
     }
 </style> 
