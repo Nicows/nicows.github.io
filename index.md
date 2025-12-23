@@ -10,7 +10,7 @@ title: Welcome
     <div class="particle-field"></div>
     <div class="wave-overlay"></div>
   </div>
-  
+
   <div class="hero-content">
     <h1>Nicolas Kohler</h1>
     <p class="subtitle">Game Programmer (Unity, C#) • Gameplay & Tools</p>
@@ -21,10 +21,23 @@ title: Welcome
   </div>
 </div>
 
-<section id="about" class="about-section full-bleed">
-  <h2>About Me</h2>
+<section id="about" class="about-section full-bleed fade-in-up">
   <div class="about-content">
-    <p></p>
+    <h2>About Me</h2>
+    <p>I am currently seeking an internship starting in February 2026, and I am ready to fully commit to game
+      development with a studio that values trust and collaboration.</p>
+    <p>Currently pursuing my second year of a Master’s degree in Game Programming, I have spent the last three years
+      deepening my expertise in C# and Unity through various team projects. These experiences have given me a
+      comprehensive understanding of different game development disciplines and the ability to collaborate effectively
+      within multi-disciplinary teams.</p>
+    <p>I am particularly interested in the future of video games and how AI tools can enhance player experiences, such
+      as through advanced quest systems or dynamic dialogues.</p>
+    <p>What can I bring to your team? My dedication, autonomy, and a strong capacity for analytical thinking and
+      problem-solving.</p>
+    <p>I was self-taught on the Unity engine before entering my current school, during which time I earned the <a
+        href="https://www.credly.com/badges/282ed788-9d3d-4c4c-9ef6-2e090682233d" target="_blank"
+        style="color: var(--accent-color); text-decoration: underline;"><strong>Unity Certified Associate:
+          Programmer</strong></a> certification.</p>
   </div>
 </section>
 
@@ -32,16 +45,54 @@ title: Welcome
   <div class="project-grid-container">
     <h2 class="section-title">Projects</h2>
     <div class="project-grid">
-      {% for project in site.projects %}
-        <a href="{{ project.url | relative_url }}" class="project-card-link">
-          <div class="project-card">
-            <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-card-bg">
-            <div class="project-card-content">
-              <h3 class="project-card-title">{{ project.title }}</h3>
-              <p class="project-card-excerpt">{{ project.excerpt }}</p>
-            </div>
+      {% assign projects = site.projects | where: "category", "Project" | where_exp: "item", "item.hidden != true" |
+      sort: "date" | reverse %}
+      {% for project in projects %}
+      {% if project.featured %}
+      <a href="{{ project.url | relative_url }}" class="project-card-link featured-project">
+        <div class="project-card featured">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-card-bg"
+            loading="lazy">
+          <div class="project-card-content">
+            <h3 class="project-card-title">{{ project.title }}</h3>
+            <p class="project-card-excerpt">{{ project.excerpt }}</p>
           </div>
-        </a>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+
+      {% for project in projects %}
+      {% unless project.featured %}
+      <a href="{{ project.url | relative_url }}" class="project-card-link">
+        <div class="project-card">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-card-bg"
+            loading="lazy">
+          <div class="project-card-content">
+            <h3 class="project-card-title">{{ project.title }}</h3>
+            <p class="project-card-excerpt">{{ project.excerpt }}</p>
+          </div>
+        </div>
+      </a>
+      {% endunless %}
+      {% endfor %}
+    </div>
+
+    <h2 class="section-title" style="margin-top: 4rem;">Game Jams</h2>
+    <div class="project-grid">
+      {% assign gamejams = site.projects | where: "category", "Game Jam" | where_exp: "item", "item.hidden != true" |
+      sort: "date" | reverse %}
+      {% for project in gamejams %}
+      <a href="{{ project.url | relative_url }}" class="project-card-link">
+        <div class="project-card">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-card-bg"
+            loading="lazy">
+          <div class="project-card-content">
+            <h3 class="project-card-title">{{ project.title }}</h3>
+            <p class="project-card-excerpt">{{ project.excerpt }}</p>
+          </div>
+        </div>
+      </a>
       {% endfor %}
     </div>
   </div>
@@ -56,14 +107,12 @@ title: Welcome
         <h4>Languages</h4>
         <div class="skills-container">
           <span class="skill-badge core-skill">C#</span>
-          <span class="skill-badge core-skill">C++</span>
         </div>
       </div>
       <div class="skills-sub-category">
         <h4>Game Engines</h4>
         <div class="skills-container">
           <span class="skill-badge core-skill">Unity</span>
-          <span class="skill-badge core-skill">Unreal Engine</span>
         </div>
       </div>
       <div class="skills-sub-category">
@@ -72,6 +121,8 @@ title: Welcome
           <span class="skill-badge">Jira</span>
           <span class="skill-badge">Github</span>
           <span class="skill-badge">Trello</span>
+          <span class="skill-badge">Fork</span>
+          <span class="skill-badge">JetBrains Rider</span>
         </div>
       </div>
     </div>
@@ -88,461 +139,23 @@ title: Welcome
   </div>
 </section>
 
-<style>
-  .main-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 2rem;
-  }
 
-  /* Hero Section - Completely Redesigned */
-  .hero {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    background: 
-      radial-gradient(circle at 20% 80%, rgba(34, 197, 94, 0.3) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(22, 163, 74, 0.3) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(21, 128, 61, 0.3) 0%, transparent 50%),
-      linear-gradient(135deg, 
-        #22c55e 0%, 
-        #16a34a 15%, 
-        #15803d 30%, 
-        #166534 45%, 
-        #14532d 60%, 
-        #052e16 75%, 
-        #22c55e 100%);
-    background-size: 400% 400%, 300% 300%, 350% 350%, 400% 400%;
-    animation: 
-      scroll-bg 20s ease infinite,
-      pulse-glow 8s ease-in-out infinite;
-  }
-
-  /* Animated Background Patterns */
-  .hero-bg-patterns {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-  }
-
-  /* Geometric Grid Pattern */
-  .geometric-grid {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: grid-move 30s linear infinite;
-  }
-
-  /* Particle Field */
-  .particle-field {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-image: 
-      radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 1px, transparent 1px),
-      radial-gradient(circle at 75% 75%, rgba(255,255,255,0.1) 1px, transparent 1px);
-    background-size: 100px 100px, 150px 150px;
-    animation: particle-drift 25s ease-in-out infinite;
-  }
-
-  /* Wave Overlay */
-  .wave-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    background: linear-gradient(45deg, 
-      rgba(255,255,255,0.1) 25%, 
-      transparent 25%, 
-      transparent 50%, 
-      rgba(255,255,255,0.1) 50%, 
-      rgba(255,255,255,0.1) 75%, 
-      transparent 75%);
-    background-size: 60px 60px;
-    animation: wave-flow 12s linear infinite;
-  }
-
-  /* Hero Content */
-  .hero-content { 
-    max-width: 800px; 
-    position: relative;
-    z-index: 2;
-    backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.1);
-    padding: 3rem;
-    border-radius: 20px;
-    border: 1px solid rgba(255,255,255,0.2);
-    box-shadow: 
-      0 20px 40px rgba(0,0,0,0.3),
-      inset 0 1px 0 rgba(255,255,255,0.2);
-  }
-
-  .hero h1 { 
-    font-size: 4rem; 
-    margin-bottom: 1rem; 
-    background: linear-gradient(45deg, #fff, #f0f0f0, #fff);
-    background-size: 200% 200%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: text-shimmer 3s ease-in-out infinite;
-    text-shadow: 0 0 30px rgba(255,255,255,0.5);
-  }
-
-  .subtitle { 
-    font-size: 1.8rem; 
-    margin-bottom: 2rem; 
-    opacity: 0.95;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    font-weight: 300;
-  }
-
-  .cta-buttons { 
-    display: flex; 
-    gap: 1.5rem; 
-    justify-content: center; 
-  }
-
-  .cta-button { 
-    padding: 1rem 2.5rem; 
-    border-radius: 50px; 
-    text-decoration: none; 
-    font-weight: 600; 
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.3);
-  }
-
-  .cta-button::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: left 0.5s;
-  }
-
-  .cta-button:hover::before {
-    left: 100%;
-  }
-
-  .cta-button:hover { 
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  }
-
-  .primary { 
-    background: rgba(255,255,255,0.9); 
-    color: #22c55e; 
-  }
-
-  .secondary { 
-    background: rgba(255,255,255,0.1); 
-    color: white; 
-  }
-
-  /* Animations */
-  @keyframes float {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    25% { transform: translateY(-20px) rotate(90deg); }
-    50% { transform: translateY(-10px) rotate(180deg); }
-    75% { transform: translateY(-30px) rotate(270deg); }
-  }
-
-  @keyframes grid-move {
-    0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
-  }
-
-  @keyframes particle-drift {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(-20px, -20px); }
-  }
-
-  @keyframes wave-flow {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(60px); }
-  }
-
-  @keyframes text-shimmer {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
-
-  @keyframes scroll-bg { 
-    0% { background-position: 0% 50%, 0% 0%, 0% 0%, 0% 50%; } 
-    50% { background-position: 100% 50%, 100% 100%, 100% 100%, 100% 50%; } 
-    100% { background-position: 0% 50%, 0% 0%, 0% 0%, 0% 50%; } 
-  }
-
-  @keyframes pulse-glow {
-    0%, 100% { opacity: 0.8; }
-    50% { opacity: 1; }
-  }
-
-  @keyframes background-shift {
-    0% {
-      background-position: 0% 50%, 100% 50%, 50% 100%;
-    }
-    25% {
-      background-position: 25% 75%, 75% 25%, 75% 75%;
-    }
-    50% {
-      background-position: 50% 0%, 0% 100%, 100% 0%;
-    }
-    75% {
-      background-position: 75% 25%, 25% 75%, 25% 25%;
-    }
-    100% {
-      background-position: 0% 50%, 100% 50%, 50% 100%;
-    }
-  }
-
-  @keyframes subtle-dark-shift {
-    0%   { background-color: #0a1a0a; }
-    25%  { background-color: #1a2e1a; }
-    50%  { background-color: #2d5a2d; }
-    75%  { background-color: #1a2e1a; }
-    100% { background-color: #0a1a0a; }
-  }
-
-  /* General Section Styling */
-  section:not(.full-bleed) { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
-  .section-title { text-align: center; margin-bottom: 3rem; font-size: 2.5rem; }
-
-  /* About Me Section */
-  .about-section {
-    padding: 6rem 2rem;
-    text-align: center;
-    color: white;
-    background: linear-gradient(180deg, #0a1a0a 0%, #1a2e1a 100%);
-    position: relative;
-    z-index: 5;
-  }
-
-  .about-content {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  .about-content h2 {
-    margin-bottom: 1.5rem;
-    font-size: 2.5rem;
-  }
-
-  .about-content p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #ddd;
-  }
-
-  /* Skills Section */
-  .skills-section {
-    padding: 4rem 0;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-
-  .skills-section .section-title {
-    margin-bottom: 2rem;
-  }
-
-  .skills-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-top: 2rem; text-align: left; }
-  @media (min-width: 768px) { .skills-grid { grid-template-columns: 1fr 1fr; } }
-  .skill-category h3 { margin-bottom: 1.5rem; color: var(--accent-color); }
-  .skills-sub-category { margin-top: 1.5rem; }
-  .skills-sub-category h4 { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-color); }
-  .skills-container { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-
-  /* Rebuilt Skill Badge Animation */
-  @property --bg-angle { syntax: "<angle>"; initial-value: 0deg; inherits: false; }
-  @keyframes rainbow-bg { to { --bg-angle: 360deg; } }
-  .skill-badge {
-    color: var(--text-secondary);
-    padding: 0.5rem 1.25rem;
-    border-radius: 9999px;
-    font-weight: 500;
-    transition: opacity 0.5s ease, transform 0.5s ease, color 0.2s ease;
-    opacity: 0;
-    transform: translateY(20px);
-    user-select: none;
-    position: relative;
-    z-index: 1;
-    background: transparent;
-  }
-  .skill-badge::before, .skill-badge::after { content: ''; position: absolute; border-radius: inherit; }
-  .skill-badge::after { top: 0; left: 0; right: 0; bottom: 0; background: var(--card-bg); z-index: -1; }
-  .skill-badge::before {
-    top: -2px; left: -2px; right: -2px; bottom: -2px;
-    background: linear-gradient(var(--bg-angle), #e74c3c, #f39c12, #f1c40f, #2ecc71, #3498db, #9b59b6, #e74c3c);
-    background-size: 200% 200%;
-    z-index: -2;
-    opacity: 0;
-    transition: opacity 0.4s ease-in-out;
-    animation: rainbow-bg 3s linear infinite;
-  }
-  .skill-badge:hover { color: var(--accent-color); }
-  .skill-badge:hover::before { opacity: 1; }
-  .skill-badge.core-skill { color: var(--accent-color); animation: pulse-glow 3s infinite ease-in-out; }
-  .skill-badge.core-skill:hover { animation-play-state: paused; }
-  .skill-badge.visible { opacity: 1; transform: translateY(0); }
-  @keyframes pulse-glow { 0%, 100% { box-shadow: 0 0 5px 0px var(--accent-color); } 50% { box-shadow: 0 0 15px 5px var(--accent-color); } }
-
-  /* Projects Section */
-  .projects-section {
-    background: #1a2e1a;
-    color: white;
-    padding: 5rem 0;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    animation: subtle-dark-shift 8s ease-in-out infinite;
-  }
-
-  .project-grid-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-
-  .projects-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-      radial-gradient(circle at 15% 50%, rgba(34, 197, 94, 0.2), transparent 40%),
-      radial-gradient(circle at 85% 30%, rgba(22, 163, 74, 0.15), transparent 40%),
-      radial-gradient(circle at 50% 80%, rgba(21, 128, 61, 0.1), transparent 40%);
-    animation: pulse-glow 10s ease-in-out infinite, background-shift 15s ease-in-out infinite;
-    z-index: 1;
-  }
-
-  .projects-section .section-title {
-    position: relative;
-    z-index: 2;
-    color: #fff;
-    margin-bottom: 3rem;
-    font-size: 2.5rem;
-  }
-
-  .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    position: relative;
-    z-index: 2;
-    text-align: left;
-  }
-
-  .project-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .project-card-link:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(34, 197, 94, 0.6);
-  }
-
-  .project-card {
-    aspect-ratio: 4 / 3;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    border-radius: 15px;
-    overflow: hidden;
-    background: rgba(22, 18, 40, 0.5);
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
-  .project-card-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease, filter 0.4s ease;
-    filter: brightness(0.7);
-  }
-
-  .project-card-link:hover .project-card-bg {
-    transform: scale(1.05);
-    filter: brightness(0.9);
-  }
-
-  .project-card-content {
-    position: relative;
-    z-index: 2;
-    padding: 1.5rem;
-    color: #fff;
-    width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
-    transform: translateY(calc(100% - 4.5rem)); /* Adjust this value to control how much is visible */
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .project-card-title {
-    margin: 0 0 0.5rem;
-    font-size: 1.5rem;
-    transition: transform 0.4s ease;
-  }
-
-  .project-card-excerpt {
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-  }
-
-  .project-card-link:hover .project-card-content {
-    transform: translateY(0);
-  }
-
-  .project-card-link:hover .project-card-excerpt {
-    opacity: 1;
-    transition-delay: 0.2s;
-  }
-
-  /* Media Queries for Responsiveness */
-  @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
-    .subtitle { font-size: 1.3rem; }
-    .cta-buttons { flex-direction: column; }
-    .hero-content { padding: 2rem; }
-  }
-</style>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // Scroll Animations
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          scrollObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeElements.forEach(el => scrollObserver.observe(el));
+
     // Staggered fade-in for skills
     const skillBadges = document.querySelectorAll('.skill-badge');
     const skillObserver = new IntersectionObserver((entries, observer) => {
@@ -581,7 +194,7 @@ title: Welcome
           indicators.forEach((indicator, index) => {
             indicator.classList.toggle('active', index === currentIndex);
           });
-          if(prevButton && nextButton) {
+          if (prevButton && nextButton) {
             prevButton.disabled = currentIndex === 0;
             nextButton.disabled = currentIndex === totalSlides - 1;
           }
@@ -593,26 +206,26 @@ title: Welcome
           updateCarouselPosition();
           updateCarouselUI();
         }
-        
-        if(prevButton && nextButton) {
-            prevButton.addEventListener('click', () => goToSlide(currentIndex - 1));
-            nextButton.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+        if (prevButton && nextButton) {
+          prevButton.addEventListener('click', () => goToSlide(currentIndex - 1));
+          nextButton.addEventListener('click', () => goToSlide(currentIndex + 1));
         }
-        
+
         indicators.forEach((indicator, index) => {
           indicator.addEventListener('click', () => goToSlide(index));
         });
-        
+
         document.addEventListener('keydown', (e) => {
           const isCarouselFocused = document.activeElement.closest('.projects-carousel');
           if (isCarouselFocused) {
-              if (e.key === 'ArrowLeft') {
-                  e.preventDefault();
-                  goToSlide(currentIndex - 1);
-              } else if (e.key === 'ArrowRight') {
-                  e.preventDefault();
-                  goToSlide(currentIndex + 1);
-              }
+            if (e.key === 'ArrowLeft') {
+              e.preventDefault();
+              goToSlide(currentIndex - 1);
+            } else if (e.key === 'ArrowRight') {
+              e.preventDefault();
+              goToSlide(currentIndex + 1);
+            }
           }
         });
 
@@ -626,4 +239,4 @@ title: Welcome
       }
     }
   });
-</script> 
+</script>

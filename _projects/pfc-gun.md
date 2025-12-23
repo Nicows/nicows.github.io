@@ -3,7 +3,10 @@ layout: project
 title: Pierre Feuille Ciseaux Gun
 image: /assets/images/pfc-gun/pfc2.jpg
 itchio_link: ""
-excerpt: "Multiplayer card game made with Photon Unity Network."
+excerpt: "Personal Project. Multiplayer card game made with Photon Unity Network."
+category: Project
+date: 2022-06-01
+featured: false
 ---
 
 <div class="project-container">
@@ -16,11 +19,11 @@ excerpt: "Multiplayer card game made with Photon Unity Network."
     <div class="project-header">
         <h1>{{ page.title }}</h1>
     </div>
-    
+
     <div class="project-content">
         <div class="project-image-container">
             <div class="project-image">
-                <img src="{{ page.image }}" alt="{{ page.title }}">
+                <img loading="lazy" src="{{ page.image }}" alt="{{ page.title }}">
             </div>
             <a href="{{ page.itchio_link }}" class="itchio-button" target="_blank">
                 <div class="itchio-icon">
@@ -32,12 +35,12 @@ excerpt: "Multiplayer card game made with Photon Unity Network."
                 <div class="scroll-text">My Contributions</div>
                 <div class="scroll-arrow">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 16L6 10L7.41 8.59L12 13.17L16.59 8.59L18 10L12 16Z" fill="currentColor"/>
+                        <path d="M12 16L6 10L7.41 8.59L12 13.17L16.59 8.59L18 10L12 16Z" fill="currentColor" />
                     </svg>
                 </div>
             </div>
         </div>
-        
+
         <div class="project-description">
             <h2>About the Project</h2>
             <p>{{ page.excerpt }}</p>
@@ -49,7 +52,8 @@ excerpt: "Multiplayer card game made with Photon Unity Network."
         In construction...
     </div>
     <div class="project-image" style="margin-top:1rem;">
-        <img src="/assets/images/pfc-gun/pfc-gif.webp" alt="{{ page.title }} gameplay" style="height: 400px; width: auto;" onerror="this.style.display='none'">
+        <img loading="lazy" src="/assets/images/pfc-gun/pfc-gif.webp" alt="{{ page.title }} gameplay"
+            style="height: 400px; width: auto;" onerror="this.style.display='none'">
     </div>
 
     <!-- Team Section -->

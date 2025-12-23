@@ -3,7 +3,10 @@ layout: project
 title: Memorize
 image: /assets/images/memorize/Memorize.jpg
 itchio_link: https://nicows.itch.io/memorize
-excerpt: "Reflexion and memory game: remember the path in the darkness."
+excerpt: "Personal Project. Reflexion and memory game: remember the path in the darkness."
+category: Project
+date: 2022-12-01
+featured: false
 ---
 
 <div class="project-container">
@@ -16,11 +19,11 @@ excerpt: "Reflexion and memory game: remember the path in the darkness."
     <div class="project-header">
         <h1>{{ page.title }}</h1>
     </div>
-    
+
     <div class="project-content">
         <div class="project-image-container">
             <div class="project-image">
-                <img src="{{ page.image }}" alt="{{ page.title }}">
+                <img loading="lazy" src="{{ page.image }}" alt="{{ page.title }}">
             </div>
             <a href="{{ page.itchio_link }}" class="itchio-button" target="_blank">
                 <div class="itchio-icon">
@@ -32,12 +35,12 @@ excerpt: "Reflexion and memory game: remember the path in the darkness."
                 <div class="scroll-text">My Contributions</div>
                 <div class="scroll-arrow">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 16L6 10L7.41 8.59L12 13.17L16.59 8.59L18 10L12 16Z" fill="currentColor"/>
+                        <path d="M12 16L6 10L7.41 8.59L12 13.17L16.59 8.59L18 10L12 16Z" fill="currentColor" />
                     </svg>
                 </div>
             </div>
         </div>
-        
+
         <div class="project-description">
             <h2>About the Project</h2>
             <p>{{ page.excerpt }}</p>
@@ -45,26 +48,31 @@ excerpt: "Reflexion and memory game: remember the path in the darkness."
             <p><strong>Tech:</strong> Unity, C#</p>
         </div>
     </div>
-    
+
     <div class="my-contribution-section">
         In construction...
     </div>
-    
+
     <div class="project-image" style="margin-top:1rem;">
-        <img src="/assets/images/memorize/Memorize.gif" alt="{{ page.title }} gameplay" onerror="this.style.display='none'">
+        <img loading="lazy" src="/assets/images/memorize/Memorize.gif" alt="{{ page.title }} gameplay"
+            onerror="this.style.display='none'">
     </div>
-    
+
     <!-- Team Section -->
     <div class="team-section">
         <h2>Team</h2>
         <div class="team-grid">
             <div class="team-category">
-                <h3>Game Programmers</h3>
+                <h3>Developer</h3>
                 <p>Nicolas KOHLER</p>
+            </div>
+            <div class="team-category">
+                <h3>Music</h3>
+                <p>Komiku</p>
             </div>
         </div>
     </div>
-    
+
     <!-- WebGL Game Section 
     <div class="webgl-game-section">
         <h2>Play the Game</h2>
@@ -79,37 +87,5 @@ excerpt: "Reflexion and memory game: remember the path in the darkness."
             </iframe>
         </div>
     </div>-->
-    
-</div>
 
-<style>
-    .webgl-game-section {
-        margin-top: 3rem;
-        padding-top: 2rem;
-        border-top: 2px solid rgba(255, 255, 255, 0.1);
-    }
-    
-    .webgl-game-section h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-        font-size: 2rem;
-        color: var(--text-color);
-    }
-    
-    .webgl-container {
-        /* Removed backdrop-filter to avoid potential interference with iframe interactions */
-        padding: 1.5rem;
-        border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        margin-bottom: 1rem;
-    }
-    
-    .webgl-container iframe {
-        pointer-events: auto; /* Ensure the iframe can receive clicks and interactions */
-    }
-    
-    @media (max-width: 768px) {
-        .webgl-container iframe {
-        }
-    }
-</style>
+</div>

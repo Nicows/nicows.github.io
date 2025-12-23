@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { base: 'hsla(30, 100%, 80%, 1)', gradient: 'hsla(30, 100%, 30%, 0)' }   // Orange
     ];
 
-    const numShapes = 35;
+    const numShapes = 15;
     const mouse = {
         x: null,
         y: null,
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         mouse.x = event.x;
         mouse.y = event.y;
     });
-     window.addEventListener('mouseout', () => {
+    window.addEventListener('mouseout', () => {
         mouse.x = null;
         mouse.y = null;
     });
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             this.element.className = `shape ${this.type.class}`;
             this.element.style.width = `${this.size}px`;
             this.element.style.height = `${this.size}px`;
-            
+
             // Space-themed styling
             if (this.type.name === 'star') {
                 this.element.innerHTML = '⭐';
@@ -121,12 +121,12 @@ document.addEventListener('DOMContentLoaded', () => {
             let dxBlackHole = blackHole.x - this.x;
             let dyBlackHole = blackHole.y - this.y;
             let distanceToBlackHole = Math.sqrt(dxBlackHole * dxBlackHole + dyBlackHole * dyBlackHole);
-            
+
             if (distanceToBlackHole > blackHole.radius && distanceToBlackHole < 300) {
                 const forceDirectionX = dxBlackHole / distanceToBlackHole;
                 const forceDirectionY = dyBlackHole / distanceToBlackHole;
                 const force = blackHole.pullStrength * (1 - distanceToBlackHole / 300);
-                
+
                 this.dx += forceDirectionX * force;
                 this.dy += forceDirectionY * force;
             }
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     this.y -= directionY;
                 }
             }
-            
+
             // Wall bouncing
             if (this.x + this.size > window.innerWidth || this.x < 0) {
                 this.dx = -this.dx;
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         blackHoleElement.style.zIndex = '1';
         blackHoleElement.style.boxShadow = '0 0 50px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 255, 255, 0.1)';
         blackHoleElement.style.animation = 'blackHolePulse 3s ease-in-out infinite';
-        
+
         // Add CSS animation
         if (!document.getElementById('black-hole-styles')) {
             const style = document.createElement('style');
@@ -192,21 +192,21 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
             document.head.appendChild(style);
         }
-        
+
         container.appendChild(blackHoleElement);
     }
 
     function init() {
         shapes.length = 0;
         container.innerHTML = '';
-        
+
         // Update black hole position
         blackHole.x = window.innerWidth / 2;
         blackHole.y = window.innerHeight / 2;
-        
+
         // Create black hole
         createBlackHole();
-        
+
         for (let i = 0; i < numShapes; i++) {
             let size = Math.random() * 30 + 15;
             let x = Math.random() * (window.innerWidth - size * 2) + size;
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
             shape.update();
         });
     }
-    
+
     init();
     animate();
 
