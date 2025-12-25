@@ -44,81 +44,130 @@ featured: false
         <div class="project-description">
             <h2>About the Project</h2>
             <p><strong>Platform:</strong> VR (Meta Quest 3)<br>
-                <strong>Genre:</strong> Puzzle, Co-op<br>
-                <strong>Description:</strong> In Kourou Space Coop, two players will have to cooperate to carry out the
-                various emblematic missions of Ariane 5. Each player will have their own specific gameplay, one player
-                is in the control base in Kourou while the other controls an assistance robot located inside the
-                launcher. Together, they will have to communicate in order to carry out different tasks to successfully
-                complete the mission.<br>
-                <strong>Download:</strong> <a href="https://atsue.itch.io/kourou-space-coop" target="_blank"
-                    class="download-link">itch.io</a>
+                <strong>Genre:</strong> Cooperative Asymmetric Puzzle<br>
+                <strong>Description:</strong> Developed during an internship at Level Up! Agency for the CNES, Kourou
+                Space Coop is a tribute to the Ariane 5 launcher missions. Two players must cooperate: one inside the
+                launcher using a VR robot, and the other in "Mission Control" providing instructions. The game
+                emphasizes communication and immersion in a zero-gravity environment.<br>
             </p>
         </div>
     </div>
-    <div class="my-contribution-section">
-        In construction...
-    </div>
-    <!-- My Contribution Section 
-    <div class="my-contribution-section">
-        <div class="contribution-header">
-            <h2>My Contribution</h2>
-            <p class="contribution-subtitle">As a Game Programmer on the project, I leveraged Meta's official SDK to harness the full potential of the Meta Quest 3 headset, implementing core cooperative gameplay features that define the player experience.</p>
+
+    <div class="contribution-item">
+        <h2>General Gameplay & Objective</h2>
+        <p>Kourou Space Coop is an asymmetric cooperative VR experience where communication is the only way to survive
+            the vacuum of space. The game pays tribute to the historic missions of the Ariane 5 launcher while
+            challenging players with high-pressure decision-making.</p>
+
+        <div class="feature-detail">
+            <h4>An Asymmetric Cooperative Duo</h4>
+            <p>The experience is built on two radically different roles:</p>
+            <ul>
+                <li><strong>The Launcher Pilot:</strong> Immersed in VR inside the Ariane 5 rocket, moving in a
+                    zero-gravity environment to manipulate physical modules.</li>
+                <li><strong>Mission Control:</strong> Stationed at a high-tech terminal, providing vital instructions
+                    and monitoring data that the pilot cannot see.</li>
+            </ul>
         </div>
-        
-        <div class="contribution-content">
-            <div class="contribution-feature">
-                <h3>Asymmetric VR Gameplay Features</h3>
-                <p>My primary focus was on creating engaging, asymmetric puzzles that required clear communication between the two players. This involved implementing distinct mechanics and interfaces for the player in the rocket and the player in the command center.</p>
-                
-                <div class="feature-showcase">
-                    <div class="feature-item">
-                        <h4>The Valves Puzzle</h4>
-                        <div class="feature-image-container">
-                            <div class="feature-image">
-                                <h6>Launcher View</h6>
-                                <img loading="lazy" src="/assets/images/kourou-space-coop/KourouValves1.png" alt="Valves view from inside the rocket">
-                            </div>
-                            <div class="feature-image">
-                                <h6>Command Center View</h6>
-                                <img loading="lazy" src="/assets/images/kourou-space-coop/KourouValves2.png" alt="Pressure gauges in the command center">
-                            </div>
+
+        <div class="feature-detail" style="margin-top: 2rem;">
+            <h4>Collaborative Problem Solving</h4>
+            <p>Inspired by the logic of <i>Keep Talking and Nobody Explodes</i>, every puzzle requires one player to
+                describe what they see while the other interprets data to find the solution. Success depends entirely on
+                the clarity of verbal communication under pressure.</p>
+        </div>
+
+        <div class="video-grid">
+            <div class="video-item">
+                <a href="https://www.youtube.com/watch?v=nYbNAVecSB0" class="video-thumbnail-link" target="_blank">
+                    <div class="video-thumbnail-wrapper">
+                        <img loading="lazy" src="https://img.youtube.com/vi/nYbNAVecSB0/maxresdefault.jpg"
+                            alt="Mission Control Gameplay" class="video-thumbnail">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                            <span>Mission Control View</span>
                         </div>
-                        <p>The player inside the launcher must turn three separate valves, while the command center player monitors pressure gauges and provides instructions on when to start and stop turning to prevent a system overload.</p>
                     </div>
-                    
-                    <div class="feature-item">
-                        <h4>The Password Puzzle</h4>
-                         <div class="feature-image-container">
-                            <div class="feature-image">
-                                <h6>Launcher View</h6>
-                                <img loading="lazy" src="/assets/images/kourou-space-coop/KourouPassword1.png" alt="Tablet with abstract symbols">
-                            </div>
-                            <div class="feature-image">
-                                <h6>Command Center View</h6>
-                                <img loading="lazy" src="/assets/images/kourou-space-coop/KourouPassword2.png" alt="Hidden keyboard for password entry">
-                            </div>
+                </a>
+            </div>
+            <div class="video-item">
+                <a href="https://www.youtube.com/watch?v=V0opKcLwwQw" class="video-thumbnail-link" target="_blank">
+                    <div class="video-thumbnail-wrapper">
+                        <img loading="lazy" src="https://img.youtube.com/vi/V0opKcLwwQw/maxresdefault.jpg"
+                            alt="Launcher Gameplay" class="video-thumbnail">
+                        <div class="play-overlay">
+                            <i class="fas fa-play"></i>
+                            <span>Launcher Pilot View</span>
                         </div>
-                        <p>The launcher player finds a tablet with bizarre, abstract symbols and must describe them to the command center player, who first has to find a hidden keyboard to input the correct sequence. This intentionally chaotic design leads to hilarious misunderstandings.</p>
                     </div>
-                    
-                    <div class="feature-item">
-                        <h4>The Fuses Puzzle</h4>
-                        <div class="feature-image-container">
-                            <div class="feature-image">
-                                <h6>Launcher View</h6>
-                                <img loading="lazy" src="/assets/images/kourou-space-coop/KourouFuses1.png" alt="Fusebox with multiple slots">
-                            </div>
-                            <div class="feature-image">
-                                <h6>Command Center View</h6>
-                                <img loading="lazy" src="/assets/images/kourou-space-coop/KourouFuses2.png" alt="Wall of indicator lights for fuses">
-                            </div>
-                        </div>
-                        <p>The launcher player must place fuses into a fusebox with many possible slots. The command center player sees a corresponding wall of lights, which turn green for a correct placement and red for an incorrect one, forcing precise communication to solve the puzzle.</p>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
-    </div> -->
+    </div>
+
+    <div class="my-contribution-section">
+        <div class="contribution-header">
+            <div class="header-icon">
+                <i class="fas fa-rocket"></i>
+            </div>
+            <h2>My Contribution</h2>
+        </div>
+
+        <div class="contribution-item">
+            <h3>Zero-G VR Locomotion System</h3>
+            <p>I developed a custom movement system for the player inside the rocket to simulate weightlessness, drawing
+                inspiration from simulations like <i>Mission ISS</i>.</p>
+            <ul>
+                <li><strong>Rigidbody Physics Adaptation:</strong> I adapted the XR Interaction Toolkit to work with a
+                    Rigidbody-centered movement. The default toolkit utilized Transform-based movements, which didn't
+                    account for inertia. I rewrote the core locomotion scripts to handle physical velocity, allowing
+                    players to grab handrails and propel themselves through the launcher.</li>
+                <li><strong>Hybrid Controls:</strong> To prevent players from getting stuck in open spaces, I
+                    implemented a hybrid system combining Zero-G momentum with horizontal joystick control.</li>
+                <li><strong>Anti-Motion Sickness Measures:</strong> Focused on minimizing VR discomfort by giving
+                    players agency over their movement through physical interactions.</li>
+            </ul>
+            <div class="contribution-images">
+                <!-- Placeholder: Zero-G Locomotion screenshot or gif -->
+                <div class="image-placeholder">Visualizing the Handrail Locomotion</div>
+            </div>
+        </div>
+
+        <div class="contribution-item">
+            <h3>Online Multiplayer & Synchronization</h3>
+            <p>I architected the online multiplayer system using modern Unity Cloud services to ensure a seamless
+                asymmetric experience.</p>
+            <ul>
+                <li><strong>Unity Relay & Lobby:</strong> Implemented the connection infrastructure using Relay and
+                    Lobby services, facilitating easy matchmaking via room codes.</li>
+                <li><strong>State Synchronization (RPCs & NetworkVariables):</strong> Managed the complex
+                    synchronization between the two asymmetric roles. I used RPCs (Remote Procedure Calls) for
+                    event-based triggers and NetworkVariables to track puzzle states (booleans for levers, floats for
+                    frequencies) in real-time.</li>
+                <li><strong>Optimized Data Flow:</strong> Since players have different views, I optimized the network
+                    traffic by only synchronizing essential object states rather than full physics for every item.</li>
+            </ul>
+        </div>
+
+        <div class="contribution-item">
+            <h3>Collaborative Puzzle Engineering</h3>
+            <p>I designed and implemented the technical logic for 5 core puzzles that define the co-op loop:</p>
+            <ul>
+                <li><strong>Takeoff Sequence:</strong> Developed the countdown logic and player attachment validation
+                    system synced with the Mission Control console.</li>
+                <li><strong>Separation & Orbit (Dual-Lever):</strong> Engineered a dual-input validation system where
+                    both players must hold physical levers in sync, tracked through server-side boolean validation.</li>
+                <li><strong>Frequency Calibration:</strong> Created a curve-alignment puzzle where players adjust each
+                    other's frequencies using float NetworkVariables, requiring precise verbal communication.</li>
+                <li><strong>Simon Says Lights:</strong> A sequence validation system where the rocket player identifies
+                    light patterns and describes them to Mission Control for input.</li>
+            </ul>
+            <div class="contribution-images">
+                <!-- Placeholder: Puzzle screenshots (Takeoff, Frequency, etc.) -->
+                <div class="image-placeholder">Screenshot of the Collaborative Puzzles in Action</div>
+            </div>
+        </div>
+    </div>
 
     <!-- Team Section -->
     <div class="team-section">
@@ -134,7 +183,7 @@ featured: false
             </div>
             <div class="team-category">
                 <h3>Game Designers</h3>
-                <p>Eliass GODSON, Nicolas COULLIAIS</p>
+                <p>Eliass GODSON, Nicolas COULLIAIS, Noé Henriot</p>
             </div>
         </div>
     </div>

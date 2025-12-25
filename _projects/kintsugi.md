@@ -54,7 +54,12 @@ featured: true
         </div>
     </div>
     <div class="my-contribution-section">
-        <h2>My Contributions</h2>
+        <div class="contribution-header">
+            <div class="header-icon">
+                <i class="fas fa-wand-magic-sparkles"></i>
+            </div>
+            <h2>My Contributions</h2>
+        </div>
 
         <div class="contribution-item">
             <h3>First Year: Mechanics & Prototypes</h3>

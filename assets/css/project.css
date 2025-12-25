@@ -336,28 +336,62 @@
 
 .contribution-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    position: relative;
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.contribution-header .header-icon {
+    font-size: 2.5rem;
+    color: #f39c12;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    filter: drop-shadow(0 0 15px rgba(243, 156, 18, 0.5));
+    animation: icon-float 3s ease-in-out infinite;
 }
 
 .contribution-header h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     background: linear-gradient(45deg, var(--text-color), #f39c12, var(--text-color));
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     animation: text-shimmer-project 4s ease-in-out infinite;
-    text-shadow: 0 0 30px rgba(243, 156, 18, 0.4);
-    margin-bottom: 1rem;
+    text-shadow: 0 0 30px rgba(243, 156, 18, 0.3);
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 .contribution-subtitle {
     font-size: 1.2rem;
     color: var(--text-secondary);
     max-width: 800px;
-    margin: 0 auto;
+    margin: 1.5rem auto 0;
     line-height: 1.6;
+    opacity: 0.8;
 }
+
+@keyframes icon-float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 
 .contribution-content {
     max-width: 1000px;
@@ -785,6 +819,13 @@
 }
 
 /* Video Section */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
 .video-container {
     margin: 3rem 0;
     text-align: center;

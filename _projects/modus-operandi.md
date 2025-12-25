@@ -46,4 +46,16 @@ hidden: true
             <p><strong>Tech:</strong> Unreal Engine 5, Oculus Quest 3</p>
         </div>
     </div>
+
+    <div class="my-contribution-section">
+        <div class="contribution-header">
+            <div class="header-icon">
+                <i class="fas fa-user-secret"></i>
+            </div>
+            <h2>My Contribution</h2>
+        </div>
+        <div class="contribution-item">
+            <p>In construction...</p>
+        </div>
+    </div>
 </div>

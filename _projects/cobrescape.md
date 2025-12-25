@@ -42,6 +42,18 @@ date: 2025-09-01
         </div>
     </div>
 
+    <div class="my-contribution-section">
+        <div class="contribution-header">
+            <div class="header-icon">
+                <i class="fas fa-running"></i>
+            </div>
+            <h2>My Contributions</h2>
+        </div>
+        <div class="contribution-item">
+            <p>In construction...</p>
+        </div>
+    </div>
+
     <!-- Team Section -->
     <div class="team-section">
         <h2>Team</h2>

@@ -44,4 +44,16 @@ hidden: true
             <p><strong>Category:</strong> {{ page.category }}</p>
         </div>
     </div>
+
+    <div class="my-contribution-section">
+        <div class="contribution-header">
+            <div class="header-icon">
+                <i class="fas fa-mask"></i>
+            </div>
+            <h2>My Contribution</h2>
+        </div>
+        <div class="contribution-item">
+            <p>In construction...</p>
+        </div>
+    </div>
 </div>

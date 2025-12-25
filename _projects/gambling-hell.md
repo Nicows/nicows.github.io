@@ -44,6 +44,9 @@ date: 2023-09-01
 
     <div class="my-contribution-section">
         <div class="contribution-header">
+            <div class="header-icon">
+                <i class="fas fa-dice"></i>
+            </div>
             <h2>My Contribution</h2>
             <p class="contribution-subtitle">I worked on calculating the score and implementing all game art assets in
                 the game.</p>

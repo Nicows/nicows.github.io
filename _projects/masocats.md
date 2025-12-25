@@ -81,7 +81,12 @@ featured: false
     </div>
 
     <div class="my-contribution-section">
-        <h2>My Contribution</h2>
+        <div class="contribution-header">
+            <div class="header-icon">
+                <i class="fas fa-cat"></i>
+            </div>
+            <h2>My Contribution</h2>
+        </div>
 
         <div class="contribution-item">
             <h3>Arena Mechanics: Traps & Bumpers</h3>
@@ -91,7 +96,8 @@ featured: false
             <div class="feature-detail">
                 <h4>Dynamic Traps</h4>
                 <p>I implemented a modular trap system that allows for easy integration of different types of hazards
-                    across the 5 arenas. These traps are designed to punish (or in this case, reward) player positioning
+                    across the level design. These traps are designed to punish (or in this case, reward) player
+                    positioning
                     with varying intensities of "pain".</p>
                 <div class="contribution-images">
                     <img loading="lazy" src="/assets/images/masocats/Masocat_wreckingball.webp"
@@ -116,14 +122,11 @@ featured: false
 
         <div class="contribution-item">
             <h3>Items & Power-ups System</h3>
-            <p>I developed a robust item system designed for scalability and ease of use by the design team.</p>
+            <p>I developed an item system designed for scalability and ease of use by the design team.</p>
             <ul>
                 <li><strong>ScriptableObjects Data Management:</strong> I used Unity's ScriptableObjects to define item
-                    behaviors, damage values, and visual effects. This architecture allowed Game Designers to create and
-                    balance new items or modify existing ones directly in the Inspector without touching a single line
-                    of code.</li>
-                <li><strong>Modular Architecture:</strong> The system supports a wide range of effects, from movement
-                    speed boosts to area-of-effect damage, making it easy to iterate on new gameplay mechanics.</li>
+                    behaviors, damage values. This architecture allowed Game Designers to create and
+                    balance new items or modify existing ones directly in the Inspector.</li>
             </ul>
             <div class="contribution-images">
                 <img loading="lazy" src="/assets/images/masocats/Masocat_powerup_items.webp"
@@ -136,26 +139,23 @@ featured: false
             <p>I was responsible for managing the overall game logic, ensuring a seamless transition between different
                 phases of the match.</p>
             <ul>
-                <li><strong>State Machine Implementation:</strong> Developed a robust game state manager to handle
-                    transitions from the lobby to the countdown, active gameplay, and the final "Victory through
-                    Suffering" screen.</li>
-                <li><strong>Local Multiplayer Synchronization:</strong> Managed the logic for multiple player inputs and
+                <li><strong>State Machine Implementation:</strong> Developed a game state manager to handle
+                    transitions from the lobby to the countdown, active gameplay, and the final victory screen.</li>
+                <li><strong>Local Multiplayer Synchronization:</strong> Managed the logic for multiple player
                     score tracking, ensuring the first cat to reach the damage threshold is correctly identified as the
                     winner.</li>
-                <li><strong>Arena Management:</strong> Handled the initialization and reset states for the different
+                <li><strong>Arena Management:</strong> Managed the initialization and reset states for the different
                     arenas, facilitating rapid rematches between players.</li>
             </ul>
         </div>
 
         <div class="contribution-item">
             <h3>In-Game UI & User Experience</h3>
-            <p>I designed and implemented the game's user interface to match the high-energy, humorous aesthetic of
+            <p>I implemented the game's user interface made by artists to match the high-energy, humorous aesthetic of
                 the project.</p>
             <ul>
                 <li><strong>Dynamic HUD:</strong> Created a responsive Heads-Up Display that tracks each player's
                     damage level and identifies the current leader in real-time.</li>
-                <li><strong>Menu Architecture:</strong> Built the navigation system for the main menu and character
-                    selection, ensuring a smooth transition into the game.</li>
                 <li><strong>Victory Feedback:</strong> Implemented the end-game screens and visual cues that
                     celebrate the "KO Champion" with style.</li>
             </ul>

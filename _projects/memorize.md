@@ -60,7 +60,12 @@ featured: true
     </div>
 
     <div class="my-contribution-section">
-        <h2>My Development Process</h2>
+        <div class="contribution-header">
+            <div class="header-icon">
+                <i class="fas fa-brain"></i>
+            </div>
+            <h2>My Development Process</h2>
+        </div>
 
         <div class="contribution-item">
             <h3>Core Game Loop & Memory Mechanic</h3>

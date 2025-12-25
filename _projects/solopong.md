@@ -50,15 +50,23 @@ hidden: true
         </div>
     </div>
     <div class="my-contribution-section">
-        In construction...
+        <div class="contribution-header">
+            <div class="header-icon">
+                <i class="fas fa-table-tennis"></i>
+            </div>
+            <h2>My Contributions</h2>
+        </div>
+        <div class="contribution-item">
+            <p>In construction...</p>
+        </div>
     </div>
     <div class="project-image" style="margin-top:1rem;">
         <img loading="lazy" src="/assets/images/solopong/SoloPong_game.gif" alt="{{ page.title }} gameplay 1"
-            style="height: 400px; width: auto;" onerror="this.style.display='none'">
+            onerror="this.style.display='none'">
     </div>
     <div class="project-image" style="margin-top:1rem;">
         <img loading="lazy" src="/assets/images/solopong/SoloPong_gif.gif" alt="{{ page.title }} gameplay 2"
-            style="height: 400px; width: auto;" onerror="this.style.display='none'">
+            onerror="this.style.display='none'">
     </div>
 
     <!-- Team Section -->
