@@ -8,6 +8,7 @@ scene."
 category: Academic Project
 date: 2024-02-01
 featured: false
+hidden: true
 ---
 
 <div class="project-container">

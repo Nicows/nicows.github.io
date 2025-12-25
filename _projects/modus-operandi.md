@@ -8,6 +8,7 @@ anxieties."
 category: Academic Project
 date: 2025-01-01
 featured: false
+hidden: true
 ---
 
 <div class="project-container">

@@ -51,11 +51,11 @@ title: Contact
             <div class="cv-section">
                 <h2>CV</h2>
                 <div class="cv-buttons">
-                    <a href="/assets/cv.pdf" class="cv-button" target="_blank">
+                    <a href="/assets/CV_KOHLER_Nicolas_Unity_Prog.pdf" class="cv-button" target="_blank">
                         <i class="fas fa-eye"></i>
                         <span>View CV</span>
                     </a>
-                    <a href="/assets/cv.pdf" class="cv-button" download>
+                    <a href="/assets/CV_KOHLER_Nicolas_Unity_Prog.pdf" class="cv-button" download>
                         <i class="fas fa-download"></i>
                         <span>Download CV</span>
                     </a>
