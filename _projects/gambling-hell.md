@@ -38,7 +38,7 @@ date: 2023-09-01
             <p>Made during the "IIM Godfather/Godmother Jam 2023". Our theme was "extravagance". In Gambling Hell,
                 defend yourself and your gains, and bet and shoot your way through the greedy monsters who just want to
                 get their grubby hands on your hard earned money!</p>
-            <p><strong>Category:</strong> Game Jam</p>
+            <p><strong>Category:</strong> {{ page.category }}</p>
         </div>
     </div>
 

@@ -4,7 +4,7 @@ title: SoloPong
 image: /assets/images/solopong/Solopong_Thumbnail.png
 store_link: https://play.google.com/store/apps/details?id=com.NicowsGames.SoloPong
 excerpt: "Personal Project. SoloPong is inspired by the old game Pong; play against yourself."
-category: Project
+category: Personal Project
 date: 2021-11-01
 featured: false
 hidden: true

@@ -92,6 +92,38 @@ p {
     z-index: 1000;
 }
 
+.back-to-top {
+    position: fixed;
+    bottom: 6rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(16, 185, 129, 0.4);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
 .theme-toggle:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px var(--hover-shadow);
@@ -105,11 +137,15 @@ p {
     transform: rotate(180deg);
 }
 
-/* Adjust theme toggle position on mobile to avoid overlap with visitor counter */
 @media (max-width: 768px) {
     .theme-toggle {
-        bottom: 5rem;
-        right: 1rem;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+
+    .back-to-top {
+        bottom: 5.5rem;
+        right: 1.5rem;
     }
 }
 

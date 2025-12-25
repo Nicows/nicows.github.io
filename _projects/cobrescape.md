@@ -38,7 +38,7 @@ date: 2025-09-01
             <p>One takes on the role of a serpent that has seized the temple’s treasure and is trying to escape, while
                 the other embodies the spirit of the temple, whose task is to prevent the serpent from leaving with its
                 loot. At the end of the first chase, the roles are reversed!</p>
-            <p><strong>Category:</strong> Game Jam</p>
+            <p><strong>Category:</strong> {{ page.category }}</p>
         </div>
     </div>
 

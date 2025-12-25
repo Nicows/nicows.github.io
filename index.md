@@ -43,11 +43,12 @@ title: Welcome
 
 <section id="projects" class="projects-section full-bleed">
   <div class="project-grid-container">
-    <h2 class="section-title">Projects</h2>
+    <h2 class="section-title">Academic Projects</h2>
     <div class="project-grid">
-      {% assign projects = site.projects | where: "category", "Project" | where_exp: "item", "item.hidden != true" |
+      {% assign academic_projects = site.projects | where: "category", "Academic Project" | where_exp: "item",
+      "item.hidden != true" |
       sort: "date" | reverse %}
-      {% for project in projects %}
+      {% for project in academic_projects %}
       {% if project.featured %}
       <a href="{{ project.url | relative_url }}" class="project-card-link featured-project">
         <div class="project-card featured">
@@ -62,7 +63,7 @@ title: Welcome
       {% endif %}
       {% endfor %}
 
-      {% for project in projects %}
+      {% for project in academic_projects %}
       {% unless project.featured %}
       <a href="{{ project.url | relative_url }}" class="project-card-link">
         <div class="project-card">
@@ -78,11 +79,29 @@ title: Welcome
       {% endfor %}
     </div>
 
-    <h2 class="section-title" style="margin-top: 4rem;">Game Jams</h2>
+    <h2 class="section-title" style="margin-top: 4rem;">Personal Projects</h2>
     <div class="project-grid">
-      {% assign gamejams = site.projects | where: "category", "Game Jam" | where_exp: "item", "item.hidden != true" |
+      {% assign personal_projects = site.projects | where: "category", "Personal Project" | where_exp: "item",
+      "item.hidden != true" |
       sort: "date" | reverse %}
-      {% for project in gamejams %}
+
+      {% for project in personal_projects %}
+      {% if project.featured %}
+      <a href="{{ project.url | relative_url }}" class="project-card-link featured-project">
+        <div class="project-card featured">
+          <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-card-bg"
+            loading="lazy">
+          <div class="project-card-content">
+            <h3 class="project-card-title">{{ project.title }}</h3>
+            <p class="project-card-excerpt">{{ project.excerpt }}</p>
+          </div>
+        </div>
+      </a>
+      {% endif %}
+      {% endfor %}
+
+      {% for project in personal_projects %}
+      {% unless project.featured %}
       <a href="{{ project.url | relative_url }}" class="project-card-link">
         <div class="project-card">
           <img src="{{ project.image | relative_url }}" alt="{{ project.title }}" class="project-card-bg"
@@ -93,8 +112,11 @@ title: Welcome
           </div>
         </div>
       </a>
+      {% endunless %}
       {% endfor %}
     </div>
+
+
   </div>
 </section>
 

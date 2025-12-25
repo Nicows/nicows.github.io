@@ -3,7 +3,7 @@ layout: project
 title: Kintsugi
 image: /assets/images/kintsugi/kintsugi_title.webp
 excerpt: "Master Project"
-category: Project
+category: Academic Project
 date: 2025-11-30
 featured: true
 ---

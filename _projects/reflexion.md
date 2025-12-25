@@ -4,7 +4,7 @@ title: Reflexion
 image: /assets/images/reflexion/Reflexion.png
 itchio_link: https://nicows.itch.io/reflexion
 excerpt: "Personal Project. Use your reflex and multiplication tables to get the best score."
-category: Project
+category: Personal Project
 date: 2021-10-01
 featured: false
 ---

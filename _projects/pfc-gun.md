@@ -4,7 +4,7 @@ title: Pierre Feuille Ciseaux Gun
 image: /assets/images/pfc-gun/pfc2.jpg
 itchio_link: ""
 excerpt: "Personal Project. Multiplayer card game made with Photon Unity Network."
-category: Project
+category: Personal Project
 date: 2022-06-01
 featured: false
 ---

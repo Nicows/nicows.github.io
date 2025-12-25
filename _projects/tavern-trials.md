@@ -18,7 +18,7 @@ date: 2024-09-01
     <div class="project-header">
         <h1>{{ page.title }}</h1>
     </div>
-    
+
     <div class="project-content">
         <div class="project-image-container">
             <div class="project-image">
@@ -31,12 +31,14 @@ date: 2024-09-01
                 <span>Play {{ page.title }} on itch.io !</span>
             </a>
         </div>
-        
+
         <div class="project-description">
             <h2>About the Project</h2>
             <p>{{ page.excerpt }}</p>
-            <p>Join the crowd of a tavern trying to judge cases to make your town peaceful again! Take part in the fate of two convicts and choose the fate of the one you find guilty! This game puts two players into the skin of “maybe-criminals” against a crowd of people and a presenter.</p>
-            <p><strong>Category:</strong> Game Jam</p>
+            <p>Join the crowd of a tavern trying to judge cases to make your town peaceful again! Take part in the fate
+                of two convicts and choose the fate of the one you find guilty! This game puts two players into the skin
+                of “maybe-criminals” against a crowd of people and a presenter.</p>
+            <p><strong>Category:</strong> {{ page.category }}</p>
         </div>
     </div>
 </div>

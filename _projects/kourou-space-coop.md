@@ -4,7 +4,7 @@ title: Kourou Space Coop
 image: /assets/images/kourou-space-coop/kourou-space-coop.png
 itchio_link: https://atsue.itch.io/kourou-space-coop
 excerpt: "A cooperative VR game inspired by Ariane 5 rocket launches. Play Kourou Space Coop on itch.io !"
-category: Project
+category: Academic Project
 date: 2024-06-01
 featured: false
 ---
@@ -19,7 +19,7 @@ featured: false
     <div class="project-header">
         <h1>{{ page.title }}</h1>
     </div>
-    
+
     <div class="project-content">
         <div class="project-image-container">
             <div class="project-image">
@@ -35,18 +35,24 @@ featured: false
                 <div class="scroll-text">My Contributions</div>
                 <div class="scroll-arrow">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 16L6 10L7.41 8.59L12 13.17L16.59 8.59L18 10L12 16Z" fill="currentColor"/>
+                        <path d="M12 16L6 10L7.41 8.59L12 13.17L16.59 8.59L18 10L12 16Z" fill="currentColor" />
                     </svg>
                 </div>
             </div>
         </div>
-        
+
         <div class="project-description">
             <h2>About the Project</h2>
             <p><strong>Platform:</strong> VR (Meta Quest 3)<br>
-            <strong>Genre:</strong> Puzzle, Co-op<br>
-            <strong>Description:</strong> In Kourou Space Coop, two players will have to cooperate to carry out the various emblematic missions of Ariane 5. Each player will have their own specific gameplay, one player is in the control base in Kourou while the other controls an assistance robot located inside the launcher. Together, they will have to communicate in order to carry out different tasks to successfully complete the mission.<br>
-            <strong>Download:</strong> <a href="https://atsue.itch.io/kourou-space-coop" target="_blank" class="download-link">itch.io</a></p>
+                <strong>Genre:</strong> Puzzle, Co-op<br>
+                <strong>Description:</strong> In Kourou Space Coop, two players will have to cooperate to carry out the
+                various emblematic missions of Ariane 5. Each player will have their own specific gameplay, one player
+                is in the control base in Kourou while the other controls an assistance robot located inside the
+                launcher. Together, they will have to communicate in order to carry out different tasks to successfully
+                complete the mission.<br>
+                <strong>Download:</strong> <a href="https://atsue.itch.io/kourou-space-coop" target="_blank"
+                    class="download-link">itch.io</a>
+            </p>
         </div>
     </div>
     <div class="my-contribution-section">
